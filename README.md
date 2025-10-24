@@ -43,7 +43,7 @@
 ## Примеры использования  
 ```powershell
 # Конвертация всех evtx в папке C:\Logs\Archive и сохранение в C:\Logs\CSV
-.\all-evtx-to-csv.ps1 -InputFolder "C:\Logs\Archive" -OutputFolder "C:\Logs\CSV"
+.\all-evtx-to-csv.ps1
 
 # Объединение всех CSV из папки C:\Logs\CSV в один файл
-.\all-csv-to-one.ps1 -InputFolder "C:\Logs\CSV" -OutputFile "C:\Logs\Combined\all_logs.csv"
+.\all-csv-to-one.ps1

@@ -5,7 +5,7 @@
 #==========================================
 
 # combine-csv.ps1 — объединяет все CSV в один файл с унифицированными колонками
-# Антон, кладёшь рядом с CSV и запускаешь. Результат: .\combined.csv
+# кладёте файл рядом с CSV и запускаете. Результат: .\combined.csv
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 Set-Location $ScriptDir
@@ -18,8 +18,6 @@ $TimestampHeader = 'Timestamp' # <--- ИЗМЕНИТЕ ЭТО НА РЕАЛЬН�
 # Если колонки нет, или она не найдена, скрипт продолжит работу, но форматировать будет нечего.
 # Если в разных файлах колонка называется по-разному, вам нужно будет сначала
 # стандартизировать имена колонок в функции Strip-Bom, либо добавить их в список.
-# В данном примере, я предполагаю, что в объединенной схеме есть колонка с именем $TimestampHeader.
-
 
 # Определение разделителя по первой строке
 function Get-Delimiter {
@@ -122,3 +120,4 @@ foreach ($f in $csvFiles) {
 
 $outRows | Export-Csv -Path $OutFile -NoTypeInformation -Encoding UTF8
 Write-Host "Готово: $OutFile"
+
